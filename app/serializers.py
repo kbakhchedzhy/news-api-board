@@ -12,11 +12,7 @@ class CommentsSerializer(serializers.ModelSerializer):
 
 class NewsSerializer(serializers.ModelSerializer):
 
-    comments = CommentsSerializer(
-        many=True,
-        required=False,
-        read_only=True,
-    )
+    comments = CommentsSerializer(many=True, required=False, read_only=True,)
 
     class Meta:
 

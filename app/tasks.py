@@ -4,8 +4,8 @@ from app.models import News
 
 
 @shared_task
-def reset_post_votes_count():
+def reset_votes():
     posts = News.objects.all()
     for post in posts:
-        post.votes.clear()
-
+        post.amount_of_votes = 0
+        post.save()

@@ -8,29 +8,42 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('title', models.TextField(max_length=200)),
-                ('link', models.TextField()),
-                ('creation_date', models.DateTimeField()),
-                ('amount_of_votes', models.IntegerField()),
-                ('author_name', models.TextField(max_length=100)),
+                ("id", models.AutoField(primary_key=True, serialize=False)),
+                ("title", models.TextField(max_length=200)),
+                ("link", models.TextField()),
+                ("creation_date", models.DateTimeField()),
+                ("amount_of_votes", models.IntegerField()),
+                ("author_name", models.TextField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='Comments',
+            name="Comments",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('author_name', models.TextField(max_length=100)),
-                ('content', models.TextField()),
-                ('creation_date', models.DateTimeField()),
-                ('news', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.news')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("author_name", models.TextField(max_length=100)),
+                ("content", models.TextField()),
+                ("creation_date", models.DateTimeField()),
+                (
+                    "news",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="app.news",  # noqa
+                    ),
+                ),
             ],
         ),
     ]

@@ -22,11 +22,16 @@ services:
       command: celery -A news_api worker -l info
       volumes:
         - .:/usr/src/app/
-#      environment:
-#        - CELERY_BROKER_URL=redis://redis:6379
-#        - CELERY_RESULT_BACKEND=redis://redis:6379
       depends_on:
         - news_api
+        - redis
+    celery_beat:
+      build: .
+      command: celery -A news_api beat -l info
+      volumes:
+        - .:/usr/src/app/
+      depends_on:
+        - celery
         - redis
     db:
       image: postgres
@@ -38,14 +43,4 @@ services:
         - POSTGRES_PASSWORD=news_db
     redis:
       image: redis:alpine
-
-#    celery-beat:
-#      build:
-#        context: .
-#      command: celery -A news_api beat -l info
-#      volumes:
-#        - .:/usr/src/
-#      depends_on:
-#        - db
-#        - redis
 

@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app', '0006_alter_comments_news'),
+        ("app", "0006_alter_comments_news"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='comments',
-            name='id',
+            model_name="comments",
+            name="id",
             field=models.AutoField(primary_key=True, serialize=False),
         ),
     ]
