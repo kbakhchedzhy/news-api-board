@@ -1,5 +1,5 @@
+
 <h1 align="center">News Board API</h1>
-====
 
 Overview
 ---
@@ -11,10 +11,6 @@ Similar platform to HackerNews.
 
 Installing
 ---
-
-.. image:: https://img.shields.io/pypi/pyversions/tree-storage.svg
-   :alt: Python Version
-   :target: https://img.shields.io/pypi/pyversions/tree-storage.svg
 
 Download and install from GitHub:
 
@@ -41,4 +37,4 @@ docker-compose up
 License
 ---
 
-This repository is distributed under The MIT license
+This repository distributed under The MIT license
