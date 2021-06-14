@@ -7,7 +7,6 @@ Overview
 The News Board API have a list of news with functionality to upvote and comment on them.
 Similar platform to HackerNews.
 
-
 Installing
 ---
 
@@ -16,7 +15,7 @@ Download and install from GitHub:
 
     `https://github.com/kbakhchedzhy/news-api-board.git`
 
-
+Cloud Agent Error: Can not send requests to localhost. Select a different agent.
 Usage
 ---
 
@@ -35,6 +34,11 @@ docker-compose build
 
 docker-compose up
 ```
+
+Postman
+---
+
+You can see Postman collection link [here](https://www.getpostman.com/collections/31f17abf124504e9054e).
 
 License
 ---
