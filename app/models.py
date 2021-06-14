@@ -21,5 +21,5 @@ class Comments(models.Model):
     content = models.TextField()
     creation_date = models.DateTimeField(auto_now_add=True)
     news = models.ForeignKey(
-        "home.News", on_delete=models.CASCADE, related_name="comments"
+        "app.News", on_delete=models.CASCADE, related_name="comments"
     )

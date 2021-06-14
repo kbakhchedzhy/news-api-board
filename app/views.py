@@ -2,8 +2,8 @@ from django.http import HttpResponseRedirect
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
-from home.models import News, Comments
-from home.serializers import NewsSerializer, CommentsSerializer
+from app.models import News, Comments
+from app.serializers import NewsSerializer, CommentsSerializer
 
 
 class NewsViewSet(ModelViewSet):

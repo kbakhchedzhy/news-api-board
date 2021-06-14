@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('author_name', models.TextField(max_length=100)),
                 ('content', models.TextField()),
                 ('creation_date', models.DateTimeField()),
-                ('news', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='home.news')),
+                ('news', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.news')),
             ],
         ),
     ]
